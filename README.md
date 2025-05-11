@@ -49,9 +49,6 @@ Results are stored in a Google Sheet with the following tabs:
 - `order-response`
 - `inquiry-response`
 
-## Screenshot
-
-![System Overview](./flow.png)
 
 
 
