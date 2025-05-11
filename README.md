@@ -51,7 +51,7 @@ Results are stored in a Google Sheet with the following tabs:
 
 ## Screenshot
 
-![System Overview](./Flow.png)
+![System Overview](./flow.png)
 
 
 
