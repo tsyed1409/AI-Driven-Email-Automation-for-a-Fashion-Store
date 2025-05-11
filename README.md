@@ -49,12 +49,10 @@ Results are stored in a Google Sheet with the following tabs:
 - `order-response`
 - `inquiry-response`
 
----
+## Screenshot
 
-## 🔗 Demo / Screenshots
+![System Overview](./Flow.png)
 
-
-![System Overview](./flow.png)
 
 
 ---
