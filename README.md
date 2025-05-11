@@ -66,3 +66,6 @@ Results are stored in a Google Sheet with the following tabs:
 
 You can view the full notebook [here](./AI%20Email%20Automation%20Tariq%20Syed%20fashion%20store%20email%20automation.ipynb).
 
+## 🖼️ System Overview
+
+![Flow Diagram](./flow.png)
