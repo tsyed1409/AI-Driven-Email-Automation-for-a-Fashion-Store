@@ -53,7 +53,9 @@ Results are stored in a Google Sheet with the following tabs:
 
 ## 🔗 Demo / Screenshots
 
-(Add screenshots or links here if available.)
+
+![System Overview](./flow.png)
+
 
 ---
 
