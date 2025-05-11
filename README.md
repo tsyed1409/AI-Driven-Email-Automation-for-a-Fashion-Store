@@ -62,4 +62,7 @@ Results are stored in a Google Sheet with the following tabs:
 - Add error monitoring and logging.
 - Expand multi-language support.
 - Integrate directly with live email systems (e.g., Gmail API).
+## 📓 Notebook
+
+You can view the full notebook [here](./AI%20Email%20Automation%20Tariq%20Syed%20fashion%20store%20email%20automation.ipynb).
 
