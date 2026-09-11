@@ -1,68 +1,87 @@
 # AI-Driven Email Automation for a Fashion Store
 
-**Tech Stack:** Python (Jupyter Notebook), OpenAI GPT-4o, LangChain, FAISS, Google Sheets API, Google Colab
+An applied AI automation project for classifying retail customer emails, extracting order details, checking stock, retrieving relevant product information, and drafting customer responses.
 
-## 📋 Project Overview
+## What it demonstrates
 
-This project automates the classification and handling of customer emails for a fashion retail business. Using GPT-4o and Retrieval-Augmented Generation (RAG), the system:
+- LLM-based email classification
+- Structured information extraction
+- Retrieval-Augmented Generation (RAG)
+- Embeddings and FAISS vector search
+- Stock-aware order handling
+- Customer-response generation
+- Environment-based configuration for external services
 
-- Classifies emails as either product inquiries or order requests.
-- Extracts product IDs and quantities from order requests.
-- Verifies stock availability and updates order statuses accordingly.
-- Generates professional customer responses for order confirmations and product inquiries.
-- Efficiently handles a large product catalog (up to 100,000+ items) using FAISS vector search.
+## Architecture
 
-## 🔑 Key AI Techniques
+```text
+Customer email
+     |
+     v
+LLM classification
+  /          \
+Order        Product inquiry
+request            |
+  |                v
+Extract ID     FAISS retrieval
++ quantity          |
+  |                v
+Stock check    Product context
+  \                /
+   \              /
+    v            v
+   Customer response
+```
 
-- ✅ LLM-based Text Classification
-- ✅ Information Extraction (product ID + quantity parsing)
-- ✅ Retrieval-Augmented Generation (RAG)
-- ✅ Embedding & Similarity Search
+The original assessment also wrote workflow outputs to Google Sheets. This public portfolio version uses small self-contained sample data so the workflow can be reviewed without external account data.
 
-## 💡 Challenges Solved
+## Technology
 
-- Handling semi-structured real-world customer emails.
-- Generating personalized, professional responses at scale.
-- Ensuring scalability without exceeding token limits.
+Python, OpenAI API, LangChain, FAISS, Jupyter Notebook and Google Colab.
 
----
+## Notebook
 
-### 🚀 How It Works
+[Open the portfolio notebook](./AI_Email_Automation_Tariq_Syed.ipynb)
 
-1️⃣ **Email Classification:**  
-   Emails are labeled as either `order request` or `product inquiry`.
+## Run locally
 
-2️⃣ **Order Processing:**  
-   For order requests, the app verifies stock, processes orders, updates stock levels, and logs order statuses.
+1. Clone the repository.
+2. Create and activate a Python virtual environment.
+3. Install dependencies with `pip install -r requirements.txt`.
+4. Copy `.env.example` to `.env` and configure your local environment.
+5. Open `AI_Email_Automation_Tariq_Syed.ipynb` in Jupyter or VS Code and run the cells in order.
 
-3️⃣ **Product Inquiry Handling:**  
-   Uses RAG to search the product catalog for relevant items and generates context-aware replies.
+## Repository structure
 
----
+```text
+AI_Email_Automation_Tariq_Syed.ipynb   Main portfolio notebook
+README.md                               Project documentation
+requirements.txt                        Python dependencies
+.env.example                            Environment configuration template
+.gitignore                              Local files excluded from Git
+flow.png                                Workflow diagram
+```
 
-### 📂 Outputs
+## Responsible AI and production considerations
 
-Results are stored in a Google Sheet with the following tabs:
+A production implementation should include schema validation, audit logging, retry and error handling, access controls, monitoring, and human review for low-confidence or high-impact decisions.
 
-- `email-classification`
-- `order-status`
-- `order-response`
-- `inquiry-response`
+## Limitations
 
+This is a portfolio demonstration rather than a production email-processing service. The included catalogue and emails are small examples. Live email, inventory and Google Sheets integrations require authenticated external services and additional operational controls.
 
+## Future improvements
 
+- Add automated tests and evaluation datasets
+- Add confidence thresholds and human-in-the-loop review
+- Integrate a production email provider and inventory API
+- Add structured logging and observability
+- Add multilingual evaluation
 
----
+## System overview
 
-## 📈 Future Improvements
+![System flow](./flow.png)
 
-- Add error monitoring and logging.
-- Expand multi-language support.
-- Integrate directly with live email systems (e.g., Gmail API).
-## 📓 Notebook
+## Author
 
-You can view the full notebook [here](./AI%20Email%20Automation%20Tariq%20Syed%20fashion%20store%20email%20automation.ipynb).
-
-## 🖼️ System Overview
-
-![Flow Diagram](./flow.png)
+**Tariq Syed** — AI, product and digital transformation practitioner.
